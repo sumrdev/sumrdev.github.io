@@ -5,7 +5,7 @@ let enemyD = [];
 let enemyC = [];
 let Player =25;
 let Lose = 0;
-let enemyMS = 500;
+let enemyMS = 600;
 let gameStatus = "waitToStart";
 function setup()
 {
@@ -56,7 +56,7 @@ function draw()
             }
 
 
-            if(Player >=enemyMS)
+            if(Player-400 >=enemyMS)
             {
                 gameStatus = "Win"
                 Player = 25;
@@ -136,7 +136,7 @@ function mouseClicked()
 
 function spawnEnemy(i)
 {
-    enemyS[i]=min(enemyMS,random(Player-10,Player+100));
+    enemyS[i]=min(enemyMS,random(Player-9,Player+125));
     side = Math.floor(random(0,4));
     if (side == 0) {
         enemy[i]=createVector(random(0,width),-enemyS[i]/2);
