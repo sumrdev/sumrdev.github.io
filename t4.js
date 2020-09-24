@@ -1,11 +1,22 @@
+let y = 500;
+let speedy = 5;
 
-var y = windowHeight/2;
+function setup()
+{
+    createCanvas(windowWidth,windowHeight);
+}
+
+
 function draw()
 {
-
-let yspeed = 1;
-createCanvas(windowWidth,windowHeight);
-background(0);
-ellipse(windowWidth/2,y,windowHeight/12);
-y=+yspeed;
+    resizeCanvas(windowWidth,windowHeight);
+    background(0);
+    let x = windowWidth/2;
+    ellipse(x,y,25);
+    
+    if(y>=height || y<=0)
+    {
+        speedy*=-1;
+    }
+y+=speedy;
 }
