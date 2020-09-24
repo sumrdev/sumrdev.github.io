@@ -5,6 +5,7 @@ let enemyD = [];
 let enemyC = [];
 let Player =25;
 let Lose = 0;
+let enemyMS = 500;
 let gameStatus = "waitToStart";
 function setup()
 {
@@ -53,6 +54,14 @@ function draw()
                 gameStatus = "Lost";
                 Player = 25;
             }
+
+
+            if(Player >=enemyMS)
+            {
+                gameStatus = "Win"
+                Player = 25;
+            }
+
         }
         fill(255);
         textAlign(CENTER);
@@ -76,6 +85,16 @@ function draw()
         text("YOU LOST",width/2,height/6);
         text("CLICK TO START",width/2,height/2);
     }
+
+    else if(gameStatus == "Win")
+    {
+        fill(255);
+        textAlign(CENTER);
+        textSize(60);
+        text("YOU WON!",width/2,height/6);
+        text("CLICK TO START",width/2,height/2);
+    }
+
 }
 
 
@@ -99,13 +118,26 @@ function mouseClicked()
 
         gameStatus = "Running";
     }   
+
+    if(gameStatus == "Win")
+    {
+        enemy=[];
+        enemyS=[];
+        enemyD=[];
+        enemyC=[];
+        for(let i = 0; i<enemyN; i++)
+        {
+            spawnEnemy(i);
+        }
+
+        gameStatus = "Running";
+    }
 }
 
 function spawnEnemy(i)
 {
-    enemyS[i]=random(Player-10,Player+150);
+    enemyS[i]=min(enemyMS,random(Player-10,Player+100));
     side = Math.floor(random(0,4));
-    console.log(side);
     if (side == 0) {
         enemy[i]=createVector(random(0,width),-enemyS[i]/2);
     } else if (side == 1) {
