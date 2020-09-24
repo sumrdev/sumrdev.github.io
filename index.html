@@ -4,18 +4,58 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldi Paint!</title>
+    <title>sumrdevsite</title>
     <style>
-      body {
+      body 
+      {
         padding: 0;
         margin: 0;
       }
+
+      .Task 
+      {
+        transition-duration: 0.4s;
+        border: none;
+        
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-table;
+        font-size: 24px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 3px solid #3d5ccc;
+        
+      }
+
+      .Task:hover 
+      {
+        background-color: #3d5ccc; 
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
     </style>
-    <script src="./p5.js"></script>
-    <script src="sketch.js"></script>
+    <div >
+    <button class=Task onclick="window.location=href='t1.html'" id ="Opgave 1"> Opgave 1</button>
+    <button class=Task onclick="window.location=href='t2.html'" id ="Opgave 2"> Opgave 2</button>
+    <button class=Task onclick="window.location=href='t3.html'" id ="Opgave 3"> Opgave 3</button>
+    <button class=Task onclick="window.location=href='t4.html'" id ="Opgave 4"> Opgave 4</button>
+    <button class=Task onclick="window.location=href='t5.html'" id ="Opgave 5"> Opgave 5</button>
+    <button class=Task onclick="window.location=href='t6.html'" id ="Opgave 6"> Opgave 6</button>
+    <button class=Task onclick="window.location=href='t7.html'" id ="Opgave 7"> Opgave 7</button>
+    <button class=Task onclick="window.location=href='t8.html'" id ="Opgave 8"> Opgave 8 og 9</button>
+    <button class=Task onclick="window.location=href='t10.html'" id ="Opgave 10"> Opgave 10</button>
+    <button class=Task onclick="window.location=href='t11.html'" id ="Opgave 11"> Opgave 11</button>
+    <button class=Task onclick="window.location=href='t11t.html'" id ="Opgave 11"> Opgave 11</button>
+
+    </div>
+   <!-- <script src="./p5.js"></script> -->
+    <!--  <script src="opgave2.js"></script>-->
   </head>
 
-  <body>
+  <body style=overflow:hidden;>
     <main>
     </main>
   </body>
