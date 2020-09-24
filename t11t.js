@@ -49,7 +49,7 @@ function draw()
 
             }
 
-            if((dist(mouseX,mouseY,enemy[i].x,enemy[i].y)) <= Player/2 + enemyS[i]/2 && enemyS[i] > Player)
+            if((dist(mouseX,mouseY,enemy[i].x,enemy[i].y)) <= Player/2 + enemyS[i]/3 && enemyS[i] > Player)
             {
                 gameStatus = "Lost";
                 Player = 25;
