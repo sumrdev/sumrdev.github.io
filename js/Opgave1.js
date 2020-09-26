@@ -1,3 +1,4 @@
+
 function draw()
 {
     let center = windowWidth/4+windowHeight/4;
