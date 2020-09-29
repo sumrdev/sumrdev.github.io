@@ -1,0 +1,88 @@
+@font-face
+{
+font-family: "bdt";
+src: url("./big_noodle_titling.ttf")
+}
+
+body
+{
+    font-family: "bdt";
+    color: white;
+    font-size: 5rem;
+    transition: 0.5s;
+    background-color: #000000;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%231f0309' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%233f0611' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%235e091a' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%237e0b22' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%239d0e2b' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23bd1133' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23dc143c' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container
+{
+padding: 1rem;
+}
+
+.midcontainer
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 50rem;
+}
+
+.slide
+{
+    color: white;
+    border-radius: 0%;
+    padding: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: inline-block;
+    border: none;
+    width: rem;
+    font-size: 2.5rem;
+    font-family: "bdt";
+    color: crimson;
+    text-align: center; 
+    margin: auto;
+    transition: 1s;
+    outline: 0;
+    border: none;
+}
+
+.slide:hover{
+  box-shadow: inset 5.5em 0 0 0 crimson;
+  color: white;
+  outline: 0;
+  border: none;
+  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+
+}
+
+
+.bBox
+{  color: var(--color);
+    transition: 0.25s;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: crimson;
+}
+
+::selection {
+  color: white;
+  background: crimson;
+}
+
+.cinema
+{
+  height: 100%;
+  width: 80%;
+
+  border-radius: 1.5rem;
+  border: 15px solid white;
+  padding: 50px;
+  margin: 1rem;
+}
