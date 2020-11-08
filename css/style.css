@@ -1,69 +1,148 @@
-.bg-blue
+@font-face
 {
-    background-color: #268AD9;
+font-family: "bdt";
+src: url("../fonts/big_noodle_titling.ttf")
 }
 
-.bd-placeholder-img 
+body
 {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    font-family: "bdt";
+    color: white;
+    font-size: 5rem;
+    transition: 0.5s;
+    background-color: #000000;
+    background-color: #000000;
+    background: linear-gradient(144deg, rgba(61,28,133,1) 0%, rgba(255,0,0,1) 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
 }
 
-  @media (min-width: 768px) 
+.container
 {
-    .bd-placeholder-img-lg 
-    {
-        font-size: 3.5rem;
-    }
-}
-.btn-primary {
-    color: #fff;
-    background-color: #52A1E0;
-    border-color: #52A1E0;
-    border-radius: 20px;
+padding: 1rem;
 }
 
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:active,
-.btn-secondary:visited,
-.btn-secondary:focus {
-    color: #fff;
-    background-color: #52A1E0;
-    border-color: #52A1E0;
-    border-radius: 20px;
-}
 
-.text-muted {
-    color: #6c757d!important;
-}
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-}
 
-.text-muted2 {
-    color: #FFFFFF!important;
-}
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-}
-
-.bd-placeholder-img
+.slide
 {
-    border-radius: 20px;
+    color: white;
+    border-radius: 0%;
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 2.5rem;
+    display: inline-block;
+    border: none;
+    width: rem;
+    font-size: 2.5rem;
+    font-family: "bdt";
+    color: crimson;
+    text-align: center; 
+    margin: auto;
+    transition: 0.4s;
+    outline: 0;
+    border: none;
+    place-items: center;
+    width: 7.5rem;
+    height: 7.5rem;
 }
 
-.card
+.slide:hover{
+  box-shadow: inset 5.5em 0 0 0 crimson;
+  color: white;
+  outline: 0;
+  border: none;
+  box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+
+}
+
+
+.bBox
+{  color: var(--color);
+    transition: 0.25s;
+
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: crimson;
+}
+
+::selection {
+  color: white;
+  background: crimson;
+}
+
+
+
+.midcontainer
 {
-    border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 50rem;
+margin: 0;
 }
 
-.shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.00)!important;
+.scriptcontainer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cinema
+{
+  display: grid;
+  width: 84.5%;
+  height: 80%;
+  color: #fff;
+  place-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.p5Canvas
+{
+  border-radius: 40px;
+}
+
+.back
+{
+    color: white;
+    border-radius: 0%;
+    padding: .75rem;
+    border: none;
+    
+    font-size: 1.5rem;
+    font-family: "LEMON MILK";
+    color: crimson;
+    text-align: center; 
+    margin: 0;
+    transition: 0.4s;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: .75rem;
+}
+
+.backDiv
+{
+    position: absolute;
+    top: 0%;
+    left: 0.5%;
+}
+.back:hover{
+box-shadow: inset 5.5em 0 0 0 crimson;
+color: white;
+background-color: crimson;
+}
+
+ul
+{
+margin: 0;
 }
