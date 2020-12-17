@@ -2,78 +2,53 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Programming exercises">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Marius Nielsen"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="icon" href="../img/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Physics</title>
+
+        <link rel = "stylesheet" href ="./css/style.css">
+
+        <script src="./js/physic.js"></script>
+        <script src="./js/p5.min.js"></script>
     </head>
-    <title>
-        SuMr Test Facility
-    </title>
-    <body>
-        <ul>
-            <div class = backDiv>
-                <button class  = back onclick="window.location=href='../index.html'">Go back</button>
-                <form>  
-                <input type="number" placeholder="Insert a length" id="a" onKeyUp="inputChange(event)">
-                <input type="number" placeholder="Insert a length" id="b" onKeyUp="inputChange(event)">
-                <input type="number" placeholder="Insert a length" id="c" onKeyUp="inputChange(event)">
-                 </form> 
-            </div>
-        </ul>
 
-        <div class = "scriptcontainer"> 
-            <div class = "cinema" id="cinema">
-                <script data-ad-client="ca-pub-6108458977480791" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <script>
-
-                function setup()
-                {
-                    var canvas = document.getElementById("cinema");
-                    var width = canvas.offsetWidth;
-                    var sketchCanvas = createCanvas(width,width/(16/9));
-                    sketchCanvas.parent("cinema")
-                    translate(width/2,height/2);
-                
-                    noFill();
-                    stroke(255);
-                    strokeWeight(3);
-                    console.log("ran");
-                
-                
-                }
-                
-                function inputChange(e) 
-                {
-                        background(0);
-                        let a = document.getElementById("a").value
-                        let b = document.getElementById("b").value
-                        let c = document.getElementById("c").value
-                
-                        let tri = [c,b,a];
-                        let triVector = [createVector(0,0),createVector(0,tri[2])];
-                    
-                        if(tri[2]<tri[0]+tri[1])
-                        {
-                            let C1 = (tri[2]*tri[2]+tri[0]*tri[0]-tri[1]*tri[1])/(2*tri[2]);
-                            let C2 = Math.sqrt(tri[0]*tri[0]-C1*C1);
-                            triVector.push(createVector(C1,C2));
-                            translate(-a/2,C2/2);
-                            triangle(triVector[2].x, triVector[2].y*-1, triVector[0].x,triVector[0].y,triVector[1].y,triVector[1].x);console.log(triVector);
-                            console.log(-a/2,C2/2);
-                        }
-                        else
-                        {
-                            console.log("Illegal move");
-                        }
-                    }
-                
-
-
-                </script>
-                <script src="../js/p5.js"></script>
-            </div>
+    <body oncontextmenu="return false;">
+        <div id="canvas">
         </div>
+        <div class="sliders">
+            <div class="slidecontainer">
+                <p>CIRCLE AMOUNT: <span id="circleAmountValue"></span></p>
+                <input type="range" min="0" max="20" value="10" class="slider" id="circleAmount">
+            </div>
+            <div class="slidecontainer">
+                <p>GRAVITY FORCE: <span id="gravityForceValue"></span></p>
+                <input type="range" min="0" max="300" value="100" class="slider" id="gravityForce">
+            </div>
+            <div class="slidecontainer">
+                <p>REPEL FORCE: <span id="repelForceValue"></span></p>
+                <input type="range" min="0" max="300" value="150" class="slider" id="repelForce">
+            </div>
+            <div class="slidecontainer">
+                <p>ATTRACT FORCE: <span id="attractForceValue"></span></p>
+                <input type="range" min="0" max="300" value="150" class="slider" id="attractForce">
+            </div>
+            <div class="slidecontainer">
+                <p>FRICTION FORCE: <span id="frictionForceValue"></span></p>
+                <input type="range" min="0" max="200" value="100" class="slider" id="frictionForce">
+            </div>
+            <div class="slidecontainer">
+                <p>DRAG FORCE: <span id="dragForceValue"></span></p>
+                <input type="range" min="0" max="36" value="9" class="slider" id="dragForce">
+            </div>
+            <div class="slidecontainer">
+                <p>SHOW VELOCITY<p></p>
+                <label class="switch">
+                <input type="checkbox" id="showVel">
+                <span class="sliderbox round"></span>
+              </label>
+            </div>
+            
+        </div>
+
     </body>
-</html>
+</html
