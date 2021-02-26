@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SRC-Projekt</title>
+
+        <script src="./lib/p5.min.js"></script>
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/Chart.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap.css.map">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/Chart.bundle.min.js"></script>
+        <script src="./js/graph.js"></script>
+        <script src="./js/prediction.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/human.js"></script>
+        
+        
+    </head>
+    <body>
+        <div id="canvas">
+        </div>
+
+
+        <!-- Graph popup -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg mw-100 w-80" role="document">
+                    <div class="modal-content">
+                        <ul class="nav nav-tabs justify-content-center" role="tablist" id="mytab">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="graph-tab" data-bs-toggle="tab" data-bs-target="#nav-graph" type="button" role="tab" aria-controls="nav-graph" aria-selected="true">SIRD</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="graph2-tab" data-bs-toggle="tab" data-bs-target="#nav-graph2" type="button" role="tab" aria-controls="nav-graph2" aria-selected="false">SIR</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="prediction-tab" data-bs-toggle="tab" data-bs-target="#nav-prediction" type="button" role="tab" aria-controls="nav-prediction" aria-selected="false">Prediction</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="modal-body tab-pane fade show active" id="nav-graph" role="tabpanel" aria-labelledby="graph-tab">
+                                <div class="chart-container">
+                                    <canvas id="simulationChartSIRD"></canvas>
+                                </div>
+                            </div>
+                            <div class="modal-body tab-pane fade" id="nav-graph2" role="tabpanel" aria-labelledby="graph2-tab">
+                                <div class="chart-container">
+                                    <canvas id="simulationChartSIR"></canvas>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-prediction" role="tabpanel" aria-labelledby="prediction-tab">                                
+                                <div class="chart-container">
+                                    <canvas id="preditionChart"></canvas>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
