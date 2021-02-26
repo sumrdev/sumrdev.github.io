@@ -68,6 +68,7 @@ function draw() {
     text("Infected: " + SIR[1], 10, 50);
     text("Recovered: " + SIR[2], 10, 70);
     text("Dead: " + SIR[3], 10, 90);
+    text("CREDIT TIL JOGGE OG DAVID",10,110);
 }
 
 function newHuman() {
